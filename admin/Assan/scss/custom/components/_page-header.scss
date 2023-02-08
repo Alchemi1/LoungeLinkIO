@@ -1,0 +1,42 @@
+.sidebar-trigger{
+    transition: transform cubic-bezier(0.25, 0.46, 0.45, 0.94) .4s;
+}
+.page-sidebar-mini{
+    
+    .sidebar-trigger{
+        transform: rotate(180deg);
+    }
+}
+.navbar-horizontal{
+    background-color: $white;
+}
+
+
+//Page header navbar style
+.page-header{
+    position: sticky;
+    top: 0;
+    z-index: $zindex-dropdown;
+    --page-header-bg:#{$page-header-bg};
+    --page-header-shadow:#{$page-header-shadow};
+    --page-header-link-color:#{$page-header-link-color};
+    --page-header-link-bg:#{$page-header-link-bg};
+    --page-header-link-hover-bg:#{$page-header-link-hover-bg};
+    --page-header-link-hover-color:#{$page-header-link-hover-color};
+    --page-header-link-shadow:#{$page-header-link-shadow};
+    --page-header-link-hover-shadow:#{$page-header-link-hover-shadow};
+    box-shadow: var(--page-header-shadow);
+    background-color: var(--page-header-bg);
+    border-bottom: $border-width solid var(--#{$prefix}border-color);
+    .nav-link{
+        color: var(--page-header-link-color);
+        background-color: var(--page-header-link-bg);
+        border-radius: $border-radius;
+        box-shadow: var(--page-header-link-shadow);
+        &:hover{
+            background-color: var(--page-header-link-hover-bg);
+            color: var(--page-header-link-hover-color);
+            box-shadow: var(--page-header-link-hover-shadow);
+        }
+    }
+}

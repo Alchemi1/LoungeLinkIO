@@ -1,0 +1,126 @@
+//Tables
+
+table {
+    th{
+        font-weight: $font-weight-bold;
+    }
+}
+
+.table-nowrap .table{
+    td,th{
+     white-space: nowrap;
+    }
+ }
+.table-card .table tbody tr:last-child td:first-child{
+border-bottom-left-radius: $card-border-radius;
+}
+.table-card .table tbody tr:last-child td:last-child{
+    border-bottom-right-radius: $card-border-radius;
+}
+.table-card{
+    .table tbody tr:last-child {
+        border-bottom-width: 0px;
+        td,th{
+            border-bottom-width: 0px;
+        }
+    }
+}
+.table-card{
+    .table.table-bordered{
+        thead tr th:first-child,tbody tr td:first-child{
+            border-left-width: 0px;
+        }
+        thead tr th:last-child,tbody tr td:last-child{
+            border-right-width: 0px;
+        }
+        tbody tr:last-child {
+            border-bottom-width: 0px!important;
+            td,th{
+                border-bottom-width: 0px!important;
+            }
+        }
+    }
+}
+
+    //dark mode
+    body.dark-mode{
+         //tables
+    .table{
+        --#{$prefix}table-striped-bg:#{$gray-800};
+        --#{$prefix}table-border-color:#{$gray-700};
+        --#{$prefix}table-hover-bg:#{$gray-800};
+        --#{$prefix}table-active-bg:#{$gray-700};
+    }
+    .table-primary{
+        --#{$prefix}table-color: #{$table-color};
+  --#{$prefix}table-bg: #{shade-color($primary,50%)};
+  --#{$prefix}table-border-color: #{shade-color($primary,45%)};
+  --#{$prefix}table-accent-bg: #{$table-accent-bg};
+  --#{$prefix}table-striped-color: #{$table-striped-color};
+  --#{$prefix}table-striped-bg: #{$table-striped-bg};
+  --#{$prefix}table-active-color: #{tint-color($primary,50%)};
+  --#{$prefix}table-active-bg: #{shade-color($primary,60%)};
+  --#{$prefix}table-hover-color:  #{tint-color($primary,50%)};
+  --#{$prefix}table-hover-bg:  #{shade-color($primary,60%)};
+    }
+    .table-info{
+        --#{$prefix}table-color: #{$table-color};
+  --#{$prefix}table-bg: #{shade-color($info,50%)};
+  --#{$prefix}table-border-color: #{shade-color($info,45%)};
+  --#{$prefix}table-accent-bg: #{$table-accent-bg};
+  --#{$prefix}table-striped-color: #{$table-striped-color};
+  --#{$prefix}table-striped-bg: #{$table-striped-bg};
+  --#{$prefix}table-active-color: #{tint-color($info,50%)};
+  --#{$prefix}table-active-bg: #{shade-color($info,60%)};
+  --#{$prefix}table-hover-color:  #{tint-color($info,50%)};
+  --#{$prefix}table-hover-bg:  #{shade-color($info,60%)};
+    }
+    .table-success{
+        --#{$prefix}table-color: #{$table-color};
+  --#{$prefix}table-bg: #{shade-color($success,50%)};
+  --#{$prefix}table-border-color: #{shade-color($success,45%)};
+  --#{$prefix}table-accent-bg: #{$table-accent-bg};
+  --#{$prefix}table-striped-color: #{$table-striped-color};
+  --#{$prefix}table-striped-bg: #{$table-striped-bg};
+  --#{$prefix}table-active-color: #{tint-color($success,50%)};
+  --#{$prefix}table-active-bg: #{shade-color($success,60%)};
+  --#{$prefix}table-hover-color:  #{tint-color($success,50%)};
+  --#{$prefix}table-hover-bg:  #{shade-color($success,60%)};
+    }
+    .table-danger{
+        --#{$prefix}table-color: #{$table-color};
+  --#{$prefix}table-bg: #{shade-color($danger,50%)};
+  --#{$prefix}table-border-color: #{shade-color($danger,45%)};
+  --#{$prefix}table-accent-bg: #{$table-accent-bg};
+  --#{$prefix}table-striped-color: #{$table-striped-color};
+  --#{$prefix}table-striped-bg: #{$table-striped-bg};
+  --#{$prefix}table-active-color: #{tint-color($danger,50%)};
+  --#{$prefix}table-active-bg: #{shade-color($danger,60%)};
+  --#{$prefix}table-hover-color:  #{tint-color($danger,50%)};
+  --#{$prefix}table-hover-bg:  #{shade-color($danger,60%)};
+    }
+    .table-warning{
+        --#{$prefix}table-color: #{$table-color};
+  --#{$prefix}table-bg: #{shade-color($warning,50%)};
+  --#{$prefix}table-border-color: #{shade-color($warning,45%)};
+  --#{$prefix}table-accent-bg: #{$table-accent-bg};
+  --#{$prefix}table-striped-color: #{$table-striped-color};
+  --#{$prefix}table-striped-bg: #{$table-striped-bg};
+  --#{$prefix}table-active-color: #{tint-color($warning,50%)};
+  --#{$prefix}table-active-bg: #{shade-color($warning,60%)};
+  --#{$prefix}table-hover-color:  #{tint-color($warning,50%)};
+  --#{$prefix}table-hover-bg:  #{shade-color($warning,60%)};
+    }
+    .table-light{
+        --#{$prefix}table-color: #{$table-color};
+  --#{$prefix}table-bg: #{$gray-600};
+  --#{$prefix}table-border-color:#{tint-color($gray-600,10%)};
+  --#{$prefix}table-accent-bg: #{$table-accent-bg};
+  --#{$prefix}table-striped-color: #{$table-striped-color};
+  --#{$prefix}table-striped-bg: #{$table-striped-bg};
+  --#{$prefix}table-active-color:#{$gray-100};
+  --#{$prefix}table-active-bg: #{$gray-700};
+  --#{$prefix}table-hover-color:#{$gray-200};
+  --#{$prefix}table-hover-bg:  #{$gray-700};
+    }
+    }

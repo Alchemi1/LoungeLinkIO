@@ -1,0 +1,230 @@
+
+
+
+
+// Required
+@import "./node_modules/bootstrap/scss/functions";
+//Import bootstrap overrides variables - theme variables
+@import "./custom/variables/variables";
+@import "./node_modules/bootstrap/scss/maps";
+@import "./node_modules/bootstrap/scss/mixins";
+@import "./node_modules/bootstrap/scss/utilities";
+@import "./custom/utilities/utilities";
+//Import bootstrap scss
+
+@import "./node_modules/bootstrap/scss/bootstrap.scss";
+
+//Custom css variables for Assan Theme
+@import "./custom/utilities/root";
+
+//Theme core style import
+
+
+@import "./custom/utilities/typography";
+@import "./custom/utilities/flexbox";
+@import "./custom/components/components";
+@import './custom/webfonts/webfonts';
+
+
+
+
+//Dark Mode variables
+body.dark-mode{
+    --#{$prefix}body-color:#{$gray-100};
+    --#{$prefix}body-bg:#{$black};
+    --#{$prefix}body-bg-rgb: #{to-rgb($black)};
+    --#{$prefix}border-color: #{$gray-700};
+    --#{$prefix}white-rgb: #{to-rgb($white)};
+  --#{$prefix}black-rgb: #{to-rgb($black)};
+  --#{$prefix}body-color-rgb: #{to-rgb($body-color)};
+  --#{$prefix}link-color: #{(tint-color($primary,25%))};
+  --#{$prefix}link-hover-color: #{$primary};
+  --#{$prefix}card-bg:#{$gray-900};
+  --#{$prefix}input-group-addon-bg:#{$gray-600};
+  .bg-body{
+    --#{$prefix}bg-opacity:1;
+    --#{$prefix}body-bg-rgb: #{to-rgb($black)};
+    background-color: rgba(var(--#{$prefix}body-bg-rgb),var(--#{$prefix}bg-opacity))!important;
+  }
+  .text-body{
+    --#{$prefix}body-color-rgb: #{to-rgb($white)};
+    color: rgba(var(--#{$prefix}body-color-rgb),var(--#{$prefix}text-opacity))!important;
+  }
+    .card{
+        --#{$prefix}card-bg:#{$gray-900};
+        --#{$prefix}card-cap-bg:#{$gray-900};
+        --#{$prefix}card-border-color:#{$gray-800};
+        --#{$prefix}card-box-shadow:0px 4px 16px rgba($black,.75);
+    }
+   
+    .list-group{
+        --#{$prefix}list-group-border-color:#{$gray-700};
+        --#{$prefix}list-group-bg:#{$gray-900};
+        --#{$prefix}list-group-active-bg:#{$gray-700};
+        --#{$prefix}list-group-color:#{$gray-100};
+        --#{$prefix}list-group-active-color:#{$white};
+        --#{$prefix}list-group-action-color:#{$gray-100};
+        --#{$prefix}list-group-action-hover-bg:#{$gray-700};
+        --#{$prefix}list-group-action-hover-color:#{$white};
+        --#{$prefix}list-group-action-active-bg:#{$gray-700};
+        --#{$prefix}list-group-action-active-color:#{$white};
+
+    }
+    .nav-tabs{
+        --#{$prefix}nav-tabs-border-color: #{$gray-800};
+    }
+    .modal{
+        --#{$prefix}modal-bg:#{$gray-900};
+    }
+    .page-header{
+        border-bottom-color:transparent;
+        --page-header-bg:#{$gray-900};
+        --page-header-link-color:#{$gray-300};
+        --page-header-link-hover-bg:#{$gray-700};
+        --page-header-link-hover-color:#{$white};
+    }
+    .page-sidebar{
+        --sidebar-bg:#{$gray-900};
+  --sidebar-shadow:null;
+  --sidebar-brand-color:#{$white};
+  --sidebar-link-color:#{$gray-300};
+  --sidebar-link-hover-color:#{$white};
+  --sidebar-link-hover-bg:#{$gray-700};
+  --sidebar-link-active-bg:#{$gray-600};
+  --sidebar-link-active-color:#{$white};
+    }
+
+    .form-control{
+        --input-bg:#{$gray-900};
+  --input-border-color:#{$gray-500};
+  --input-color:#{$white};
+  --input-focus-color:#{$white};
+  --input-focus-border-color:#{$gray-400};
+  --input-disabled-bg:#{$gray-800};
+  --input-disabled-color:#{$gray-500};
+  --input-disabled-border-color:#{$gray-800};
+  --input-placeholder-color:#{$gray-400};
+    }
+    .form-check-input{
+        --form-check-input-bg:#{$gray-900};
+  --form-check-input-border:#{$input-border-width} solid #{$gray-500};
+    }
+
+    .input-group-text{
+        --input-group-addon-bg:#{$gray-500};
+--input-group-addon-border-color:#{$gray-500};
+--input-group-addon-color:#{$white};
+    }
+    .form-select{
+        --form-select-color:#{$white};
+        --form-select-bg:#{$gray-900};
+        --form-select-border-color:#{$gray-500};
+    }
+    .accordion{
+        --#{$prefix}accordion-bg:#{$gray-900};
+        --#{$prefix}accordion-color:#{$gray-200};
+        
+        --#{$prefix}accordion-active-bg:#{$gray-100};
+        --#{$prefix}accordion-active-color:#{$primary};
+    }
+    .offcanvas{
+        --#{$prefix}offcanvas-bg:#{$gray-900};
+        --#{$prefix}offcanvas-color:#{$gray-100};
+    }
+
+    .breadcrumb{
+        --#{$prefix}breadcrumb-divider-color:#{$gray-600};
+        --#{$prefix}breadcrumb-item-active-color:#{$gray-500};
+    }
+    .pagination{
+        --#{$prefix}pagination-bg:#{$gray-900};
+        --#{$prefix}pagination-border-color:var(--#{$prefix}border-color);
+        --#{$prefix}pagination-color:var(--#{$prefix}body-color);
+        --#{$prefix}pagination-focus-bg:var(--#{$prefix}gray-700);
+        --#{$prefix}pagination-focus-box-shadow:var(--#{$prefix}box-shadow);
+        --#{$prefix}pagination-focus-color:var(--#{$prefix}white);
+        --#{$prefix}pagination-hover-bg:var(--#{$prefix}gray-700);
+        --#{$prefix}pagination-hover-color:var(--#{$prefix}white);
+        --#{$prefix}pagination-hover-border-color:var(--#{$prefix}gray-700);
+        --#{$prefix}pagination-disabled-color:var(--#{$prefix}gray-500);
+        --#{$prefix}pagination-disabled-bg:var(--#{$prefix}gray-900);
+        --#{$prefix}pagination-disabled-border-color:var(--#{$prefix}gray-800);
+    }
+    .btn:not([class*=btn-]){
+        --#{$prefix}btn-color: var(--#{$prefix}body-color);
+    }
+    .dropdown-menu,.daterangepicker{
+        --#{$prefix}dropdown-bg: #{$gray-900};
+        --#{$prefix}dropdown-divider-bg: #{$gray-700};
+        --#{$prefix}dropdown-border-radius: #{$dropdown-border-radius};
+        --#{$prefix}dropdown-border-color: #{$gray-700};
+        --#{$prefix}dropdown-color: #{$gray-300};
+        --#{$prefix}dropdown-header-color: #{$gray-500};
+        --#{$prefix}dropdown-link-color: #{$gray-100};
+        --#{$prefix}dropdown-link-hover-color: #{$white};
+        --#{$prefix}dropdown-link-hover-bg: #{$gray-700};
+        --#{$prefix}dropdown-link-active-color: #{$white};
+        --#{$prefix}dropdown-link-active-bg: #{$gray-700};
+    }
+    .toast{
+        --#{$prefix}toast-bg: #{$gray-700};
+        --#{$prefix}toast-border-color: #{$gray-800};
+        --#{$prefix}toast-header-bg: #{$gray-800};
+        --#{$prefix}toast-header-color: #{$white};
+        --#{$prefix}toast-color: #{$gray-200};
+    }
+    .progress{
+        --#{$prefix}progress-bg: #{$gray-700};
+    }
+    .swiper-button-prev,.swiper-button-next{
+        background-color: var(--#{$prefix}body-bg);
+    }
+    .apexcharts-canvas .apexcharts-marker{
+        stroke:var(--#{$prefix}card-bg);
+    }
+    .apexcharts-heatmap-rect{
+        stroke: $gray-900!important;
+    }
+    .btn-close{
+        filter: $btn-close-white-filter;
+    }
+    hr{
+        --#{$prefix}hr-border-color: #{$gray-700};
+    }
+
+    //buttons
+    .btn.btn-light{
+        --#{$prefix}btn-color: #{$gray-200};
+        --#{$prefix}btn-bg: rgba(var(--#{$prefix}white-rgb),.125);
+        --#{$prefix}btn-border-color: rgba(var(--#{$prefix}white-rgb),.05);
+        --#{$prefix}btn-hover-bg: rgba(var(--#{$prefix}white-rgb),.25);
+        --#{$prefix}btn-hover-border-color:  rgba(var(--#{$prefix}white-rgb),.075);
+        --#{$prefix}btn-hover-color: #{$gray-100};
+        --#{$prefix}btn-active-color: #{$white};
+        --#{$prefix}btn-active-bg:  rgba(var(--#{$prefix}white-rgb),.175);
+        --#{$prefix}btn-active-border-color: rgba(var(--#{$prefix}white-rgb),.075);
+    }
+    .btn.btn-outline-light{
+        --#{$prefix}btn-color: #{$gray-200};
+        --#{$prefix}btn-border-color: rgba(var(--#{$prefix}white-rgb),.075);
+        --#{$prefix}btn-hover-border-color: rgba(var(--#{$prefix}white-rgb),.125);
+        --#{$prefix}btn-hover-bg: rgba(var(--#{$prefix}white-rgb),.075);
+        --#{$prefix}btn-hover-color: #{$gray-200};
+        --#{$prefix}btn-active-bg: rgba(var(--#{$prefix}white-rgb),.25);
+        --#{$prefix}btn-active-color:#{$white};
+        --#{$prefix}btn-active-border-color: rgba(var(--#{$prefix}white-rgb),.175);
+    }
+    .navbar-horizontal{
+        background-color: var(--#{$prefix}card-bg);
+        .navbar-nav{
+            --#{$prefix}nav-link-color:#{$gray-300};
+        --#{$prefix}nav-link-hover-color:#{$gray-100};
+        --#{$prefix}nav-link-active-color:#{$white};
+        }
+    }
+    .avatar-status{
+        &::before{
+            border-color: $gray-900;
+        }
+    }
+}
