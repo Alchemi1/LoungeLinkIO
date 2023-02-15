@@ -1,0 +1,3 @@
+[submodule "socials/chatter"]
+	path = socials/chatter
+	url = https://github.com/FOR-TIMI/chatter
