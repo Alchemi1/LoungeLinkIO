@@ -1,3 +1,6 @@
 [submodule "socials/chatter"]
 	path = socials/chatter
 	url = https://github.com/FOR-TIMI/chatter
+[submodule "socials/react-social-v1"]
+	path = socials/react-social-v1
+	url = https://github.com/pvishnuprasaath/react-social-v1
